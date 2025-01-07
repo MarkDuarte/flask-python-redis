@@ -31,15 +31,18 @@ flask-redis-ddd
 
 ```bash
 docker run --name redis -p 6379:6379 -d redis
+```
 
 ### Install Dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ### Start the Flask server:
 ```bash
 python main.py
+```
 
 # Testing the Endpoints
 
@@ -48,15 +51,17 @@ python main.py
 curl -X POST http://127.0.0.1:5000/session \
 -H "Content-Type: application/json" \
 -d '{"user_id": "123", "session_data": {"name": "John Doe"}, "ttl": 3600}'
+```
 
 ### Get a Session:
 ```bash
 curl http://127.0.0.1:5000/session/123
+```
 
 ### Delete a Session:
 ```bash
 curl -X DELETE http://127.0.0.1:5000/session/123
-
+```
 # Features
 
 - Domain-Driven Design (DDD): Separation of concerns into domain, infrastructure, and interfaces layers.
